@@ -1,0 +1,57 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background-color: #f0f0f0;
+}
+
+.logo {
+    height: 265px;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        height: 150px;
+    }
+}
+
+.service-box {
+    background-color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #ddd;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons a {
+    font-size: 1.5em;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Это позволит футеру оставаться внизу */
+}
+
+.carousel-inner img {
+    height: 400px;
+    object-fit: cover;
+}
+
+header, footer {
+    background-color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fff;
+}
