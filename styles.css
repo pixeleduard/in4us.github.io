@@ -15,17 +15,39 @@ body {
 }
 
 .service-box {
-    background-color: #fff;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid #ddd;
-}
+        border: 1px solid #ddd; /* Граница для визуализации */
+        border-radius: 10px; /* Скругление углов карточки */
+        overflow: hidden; /* Скрывает переполнение содержимого */
+        transition: box-shadow 0.3s; /* Плавный переход для эффекта наведения */
+        height: auto; /* Позволяет карточке автоматически подстраиваться под содержимое */
+    }
 
-.service-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
+    .service-box:hover {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Эффект наведения */
+    }
 
+    .service-image {
+        height: 200px; /* Фиксированная высота для изображения */
+        background-size: cover;
+        background-position: center;
+    }
+
+    .service-content {
+        padding: 1rem; /* Увеличение отступов для текста */
+    }
+
+    .service-content h4 {
+        margin-bottom: 0.5rem; /* Отступ между заголовком и текстом */
+    }
+
+    .service-content p {
+        margin: 0; /* Убирает отступы у параграфа */
+        overflow: hidden; /* Скрывает переполнение */
+        text-overflow: ellipsis; /* Показывает многоточие, если текст слишком длинный */
+        display: -webkit-box; /* Использует flexbox для управления текстом */
+        -webkit-box-orient: vertical; /* Вертикальное направление */
+        -webkit-line-clamp: 3; /* Ограничивает количество строк текста */
+    }
 .social-icons a {
     font-size: 1.5em;
 }
